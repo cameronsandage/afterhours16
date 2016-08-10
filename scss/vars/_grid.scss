@@ -1,0 +1,32 @@
+// --------------------------------------------------
+// Grid Mixin
+// --------------------------------------------------
+
+@mixin one--of--six {
+  width: 15%;
+  margin-right: 2%;
+}
+@mixin two--of--six {
+  width: 48%;
+  margin-right: 4%;
+  float: left;
+  clear: none;
+
+  &:nth-child(odd) {
+    margin-right: 0;
+  }
+}
+@mixin four--of--six {
+  width: 66%;
+  margin-right: 2%;
+}
+@mixin five--of--six {
+  width: 83%;
+  margin-right: 2%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+$margin--one: 17%;

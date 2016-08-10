@@ -1,0 +1,22 @@
+// --------------------------------------------------
+// Breakpoint Mixin
+// --------------------------------------------------
+
+@mixin breakpoint($class) {
+  @if $class == base {
+    @media only screen and (min-width: 0) { @content; }
+  }
+
+  @else if $class == tight {
+    @media only screen and (min-width: 46rem) { @content; }
+  }
+
+  @else if $class == wide {
+    @media only screen and (min-width: 64.5rem) { @content; }
+  }
+
+  @else if $class == max-width {
+    @media only screen and (min-width: 84rem) { @content; }
+  }
+ 
+}

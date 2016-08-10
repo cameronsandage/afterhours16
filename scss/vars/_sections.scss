@@ -1,0 +1,141 @@
+// --------------------------------------------------
+// Page Components
+// --------------------------------------------------
+
+// LAYOUT HELPERS
+//
+// These should be as modular as possible for reuse
+
+.page-wrapper{
+  max-width: 74rem;
+  margin: 0 6%;
+
+  @include breakpoint(max-width) {
+    margin: 0 auto;
+  }
+}
+
+// PAGE SECTIONS
+.section-content {
+  padding-left: 6%;
+  overflow: auto;
+  border-left: 2px solid $pink;
+
+  @include breakpoint(wide) {
+    padding: 0 9rem;
+  }
+
+  // @include baseline;
+}
+
+.inner-wrapper {
+  padding: 0 0 0 6%;
+
+  @include breakpoint(wide) {
+    padding: 0 9rem;
+  }
+}
+
+// .section_04 {
+//    color: $white;
+
+//   .section-content {
+//     border-left: 2px solid $white;
+//   }
+
+//   .section-number {
+//     color: $white;
+//     border-bottom: 2px solid $white;
+//   }
+// }
+
+// PAGE SECTIONS
+section {
+  position: relative;
+  padding: 0;
+  background: $white;
+
+  & #sec-1, #sec-2, #sec-3, #sec-4 {
+    position: absolute;
+    top: -4.4rem;
+  }
+
+  // @include baseline;
+}
+
+.white-section {
+  padding-bottom: 1.5rem;
+}
+.grey-section {
+  padding-top: 1.5rem;
+}
+
+.white-section .section-content {
+  &:first-child {
+    padding-top: 3rem;
+  }
+  &:last-child {
+    padding-bottom: 3rem;
+  }
+}
+
+.grey-section .section-content {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.editorial {
+  width: 100%;
+  float: left;
+  clear: both;
+
+  @include breakpoint(tight) {
+    @include two--of--six;
+  }
+
+  .editorial-img {
+    background-color: white;
+    display: block;
+    margin-top: 20px;
+    padding: 6%;
+    width: 65%;
+  }
+}
+
+// OUR PARTNERS SECTION
+.partners-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partners-list_list-item {
+  display: block;
+  width: 44%;
+  padding: 1.5rem 0;
+
+  & a img {
+    max-height: 6rem;
+  }
+
+  @include breakpoint(tight) {
+    width: 21%;
+
+    & a img {
+      max-height: 7rem;
+    }
+  }
+}
+
+.partner-logo {
+  // width: 100%;
+  // max-height: 30px;
+  // max-width: 100%;
+}
+
+.button-right {
+  float: right;
+  margin-right: 0;
+}

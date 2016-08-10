@@ -1,0 +1,223 @@
+// --------------------------------------------------
+// Typography Settings
+// --------------------------------------------------
+
+// Baseline Grid Mixin
+@mixin baseline {
+  background-image: linear-gradient(to bottom,#0ff 0,rgba(255,255,255,0)1px);
+  background-repeat: repeat-y;
+  background-size: 100% 1.5rem;
+  background-position: (0px -1px);
+}
+
+// Typographic Placeholders
+
+%base-type {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+%body-copy {
+  font-family: 'Gentium Book Basic', Georgia, serif;
+  padding-bottom: 1.125rem;
+  padding-top: .375rem;
+}
+
+%h2 {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 3.052rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  padding-bottom: 2.25rem;
+  padding-top: .875rem;
+
+  @include breakpoint(tight) {
+    font-size: 3.815rem;
+    line-height: 4.5rem;
+  }
+}
+
+%h4 {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 1.563rem;
+  line-height: 2rem;
+  font-weight: 400;
+  padding-bottom: .8rem;
+  padding-top: .75rem;
+
+  @include breakpoint(tight) {
+    font-size: 1.953rem;
+    line-height: 3rem;
+  }
+}
+
+%ms-1 {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: .875rem;
+  color: $pink;
+}
+
+%ms0-sans {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 3rem;
+  padding-bottom: calc(.5rem - 3px);
+  padding-top: 1rem;
+  color: $pink;
+
+}
+
+%ms1 {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 3rem;
+  padding-bottom: calc(.5rem - 3px);
+  padding-top: 1rem;
+  color: $pink;
+}
+
+%ms2 {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding-bottom: 0;
+  padding-top: 1.7rem;
+
+  @include breakpoint(tight) {
+    font-size: 1.5625rem;
+  line-height: 1.75rem;
+  }
+}
+
+%nav-anchor {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 4.5rem;
+  color: $pink;
+  text-decoration: none;
+
+  &:hover {
+    padding-bottom: 8px;
+    border-bottom: 2px solid $pink
+  }
+
+  @include breakpoint(tight) {
+    font-size: 1rem;
+  }
+}
+
+%base-hover {
+  color: $pink;
+  text-decoration: underline;
+}
+
+%base-anchor {
+  color: $black;
+  text-decoration: underline;
+
+  &:hover {
+      @extend %base-hover;
+  }
+
+  &:active {
+    color: $dark-pink;
+    border-color: $dark-pink;
+  }
+}
+
+%button-style {
+  -webkit-appearance:none;
+  background-color: transparent;
+  border: 1px solid $white;
+  color: $white;
+  display: block;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 1.25rem;
+  margin-top: 1.375rem;
+  max-width: 14rem;
+  padding: .5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+// Base Type Styles
+body {
+  @extend %base-type;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  @extend %body-copy;
+}
+
+h2 {
+  @extend %h2;
+}
+
+h3 {
+  @extend %ms2;
+
+  & section-number {
+    @extend %ms1;
+  }
+}
+
+h4 {
+  @extend %h4;
+}
+
+a.inline-link {
+  @extend %base-anchor;
+  color: $pink;
+  text-decoration: none;
+}
+
+a.large-link {
+  color: $pink;
+  text-decoration: none;
+  // padding-bottom: .125rem;
+
+  &:hover {
+    border-bottom: 2px solid $pink;
+  }
+
+  &:active {
+    color: $dark-pink;
+    border-color: $dark-pink;
+  }
+}
+
+::selection {
+  background: $pink;
+  color: white;
+}
+::-moz-selection {
+  background: $pink;
+  color: white;
+}
+
+// Modular Type Classes
+.section-header {
+  @extend %h2-copy;
+}
+
+.section-number {
+  @extend %ms1;
+  border-bottom: 2px solid $pink;
+  width: 5rem;
+}
+
+.editorial-button {
+  @extend %button-style;
+  margin-bottom: 1.125rem;
+
+  &:hover {
+    background-color: $white;
+    color: $pink;
+  }
+}

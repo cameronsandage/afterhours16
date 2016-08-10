@@ -1,0 +1,203 @@
+// --------------------------------------------------
+// Module: Page Header
+// -------------------------------------------------
+
+header {
+  display: block;
+  width: 100%;
+  background: $black;
+  height: 82px;
+  padding-top: 43px;
+
+  & .page-wrapper::after {
+    display: none;
+  }
+}
+
+// .wordmark {
+//   background: url("../img/ah-wordmark.png");
+//   background-size: cover;
+//   height: 39px;
+//   width: 300px;
+//   text-indent: -99999px;
+//   overflow: hidden;
+// }
+
+
+
+.hero {
+  position: relative;
+  background: $black;
+  // background-image: url("../img/HeroBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(20vh);
+  padding: 0 6%;
+  text-align: center;
+
+  @include breakpoint(tight) {
+    height: calc(40vh);
+  }
+  @include breakpoint(wide) {
+    height: calc(60vh);
+  }
+}
+
+.hero-img {
+  height: auto;
+  width: 90%;
+  margin: auto;
+  padding-top: 2.5rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @include breakpoint(tight) {
+    width: 70%;
+  }
+  @include breakpoint(wide) {
+    width: 60%;
+  }
+}
+
+.nav-main {
+  position: relative;
+  width: 100%;
+  background: $black;
+  height: 4.5rem;
+  display: none;
+
+  @include breakpoint(tight) {
+      display: block;
+    }
+
+  & ul {
+    display: block;
+    float: left;
+    clear: none;
+
+    @include breakpoint(tight) {
+      padding-left: 6%;
+    }
+
+    @include breakpoint(wide) {
+      padding-left: calc(9rem + 4px);
+    }
+
+    &:last-child {
+      float: left;
+      padding-left: 2rem;
+
+      @include breakpoint(tight) {
+        float: right;
+        padding-left: 0;
+        padding-right: 6%;
+      }
+
+      @include breakpoint(wide) {
+        padding-right: calc(9rem + 4px);
+      }
+    }
+
+    & li {
+      display: block;
+      float: left;
+      margin-left: 2rem;
+
+      @include breakpoint(tight) {
+        margin-left: 4rem;
+      }
+      @include breakpoint(wide) {
+        margin-left: 5rem;
+      }
+      @include breakpoint(max-width) {
+        margin-left: 7rem;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      & a {
+        @extend %nav-anchor;
+      }
+
+      &.active a {
+        padding-bottom: 8px;
+        border-bottom: 2px solid $pink
+      }
+    }
+  }
+}
+
+.nav-mobile {
+  position: relative;
+  width: 100%;
+  background: $black;
+  height: 4.5rem;
+  display: block;
+  text-align: center;
+
+  @include breakpoint(tight) {
+      display: none;
+    }
+
+  & ul {
+    text-align: center;
+
+    & li {
+      display: inline;
+      margin-left: 8%;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      & a {
+        @extend %nav-anchor;
+      }
+    }
+  }
+}
+
+.nav-wrapper {
+  display:inline-block;
+  margin: 0 auto;
+  text-align: center; 
+  @include breakpoint(tight) {
+    display: block;
+    margin: 0;
+  }
+}
+.sticky {
+
+    @include breakpoint(wide) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 500;
+    }
+}
+.nav-offset {
+  margin-top: 0;
+  @include breakpoint(wide) {
+      margin-top: 4.5rem;
+    }
+}
+
+.nav-secondary-logo {
+  width: 0;
+  opacity: 0;
+  @include breakpoint(tight) {
+    max-width: 100px;
+    opacity: 1;
+    position: absolute;
+    top: 21px;
+    left: 50%;
+    margin-left: -50px;
+    width: 100%;
+    z-index: 1000;
+  }
+}
