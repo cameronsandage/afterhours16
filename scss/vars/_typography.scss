@@ -10,6 +10,7 @@
   background-position: (0px -1px);
 }
 
+
 // Typographic Placeholders
 
 %base-type {
@@ -36,6 +37,14 @@
     line-height: 4.5rem;
   }
 }
+
+.special{
+  font-weight: 600;
+  color: #999;
+}
+
+
+
 
 %h4 {
   font-family: 'Montserrat', Helvetica, sans-serif;
@@ -177,6 +186,14 @@ a.inline-link {
   text-decoration: none;
 }
 
+a.mailto{
+  color: $pink;
+  text-decoration: none;
+  @extend %base-anchor;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
 a.large-link {
   color: $pink;
   text-decoration: none;
@@ -205,6 +222,8 @@ a.large-link {
 .section-header {
   @extend %h2-copy;
 }
+
+
 
 .section-number {
   @extend %ms1;

@@ -102,6 +102,37 @@ section {
   }
 }
 
+.editorialLong {
+  width: 100%;
+  
+}
+
+.video{
+  clear:both;
+  }
+
+.titleVideo{
+  clear: both;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: .9rem;
+  font-weight: 500;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color:$black;
+}
+
+.moreInfo{
+  padding-top: 20px;
+}
+
+
+.images2{
+  width: 32%;
+  background-color: blue;
+  float:left;
+}
+
+
 // OUR PARTNERS SECTION
 .partners-list {
   display: flex;

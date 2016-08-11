@@ -62,6 +62,10 @@ h2 {
       font-size: 3.815rem;
       line-height: 4.5rem; } }
 
+.special {
+  font-weight: 600;
+  color: #999; }
+
 h4 {
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-size: 1.563rem;
@@ -116,14 +120,14 @@ h3, .judge_name, .artist_name {
     .nav-main ul li a, .nav-mobile ul li a {
       font-size: 1rem; } }
 
-a.inline-link:hover, .page-footer_link:hover, .judge_social-list .judge_social-link:hover, .artist_social-list .judge_social-link:hover {
+a.inline-link:hover, a.mailto:hover, .page-footer_link:hover, .judge_social-list .judge_social-link:hover, .artist_social-list .judge_social-link:hover {
   color: #ee6ba6;
   text-decoration: underline; }
 
-a.inline-link, .page-footer_link, .judge_social-list .judge_social-link, .artist_social-list .judge_social-link {
+a.inline-link, a.mailto, .page-footer_link, .judge_social-list .judge_social-link, .artist_social-list .judge_social-link {
   color: #141416;
   text-decoration: underline; }
-  a.inline-link:active, .page-footer_link:active, .judge_social-list .judge_social-link:active, .artist_social-list .judge_social-link:active {
+  a.inline-link:active, a.mailto:active, .page-footer_link:active, .judge_social-list .judge_social-link:active, .artist_social-list .judge_social-link:active {
     color: #cc3387;
     border-color: #cc3387; }
 
@@ -148,6 +152,12 @@ body {
 a.inline-link {
   color: #ee6ba6;
   text-decoration: none; }
+
+a.mailto {
+  color: #ee6ba6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem; }
 
 a.large-link {
   color: #ee6ba6;
@@ -242,6 +252,29 @@ section {
     margin-top: 20px;
     padding: 6%;
     width: 65%; }
+
+.editorialLong {
+  width: 100%; }
+
+.video {
+  clear: both; }
+
+.titleVideo {
+  clear: both;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: .9rem;
+  font-weight: 500;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: #141416; }
+
+.moreInfo {
+  padding-top: 20px; }
+
+.images2 {
+  width: 32%;
+  background-color: blue;
+  float: left; }
 
 .partners-list {
   display: -webkit-box;
